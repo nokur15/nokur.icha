@@ -1,0 +1,4 @@
+1. Pembuatan grafik popularitas setiap caRek terhadap setiap "kategori Anda" sebagai parameter
+2. CaRek yang terpilih terbanyak dalam recent times
+3. Calon Rektor Integrated(?)
+4. 
