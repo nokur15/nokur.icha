@@ -1,4 +1,3 @@
-1. Pembuatan grafik popularitas setiap caRek terhadap setiap "kategori Anda" sebagai parameter
-2. CaRek yang terpilih terbanyak dalam recent times
-3. Calon Rektor Integrated(?)
-4. 
+1. CaRek yang terpilih terbanyak dalam recent times
+2. Calon Rektor Integrated : Visualisasi Calon Rektor dengan data semua aspek terbanyak
+3. Menentukan personality paling populer yang diketahui seorang calon Rektor 
