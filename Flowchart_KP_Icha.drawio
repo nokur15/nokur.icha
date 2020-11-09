@@ -1,1 +1,115 @@
-<mxfile host="app.diagrams.net" modified="2020-11-09T08:41:00.485Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" version="13.8.8" etag="4SIdf9PULSqBp9TyzeHj" type="github"><diagram id="lEOuFyNiyKHmKAD7OHnN">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-09T08:52:50.429Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" etag="6a4WWsVwMbil2yh7v2HD" version="13.8.8" type="github">
+  <diagram id="lEOuFyNiyKHmKAD7OHnN" name="Page-1">
+    <mxGraphModel dx="343" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-1" target="6jcUVgU10VQW8cEV4oEB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-1" value="Start" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-2" target="6jcUVgU10VQW8cEV4oEB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-2" value="Mengimpor data dari file SQL berisi waktu, nama pesawat, dan posisi pesawat" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="120" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-4" target="6jcUVgU10VQW8cEV4oEB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-4" value="Membuat List berisi nama pesawat di data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="220" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-6" target="6jcUVgU10VQW8cEV4oEB-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-6" target="6jcUVgU10VQW8cEV4oEB-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="370" />
+              <mxPoint x="450" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-6" value="Apakah sudah semua pesawat?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="207.5" y="330" width="165" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-9" target="6jcUVgU10VQW8cEV4oEB-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-9" value="Membuat list berisi latitude dan longitude setiap pesawat satu per satu berdasarkan list nama pesawat" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="440" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-11" value="Iya" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="410" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-13" value="Tidak" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="340" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-14" target="6jcUVgU10VQW8cEV4oEB-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-14" value="Latitude dan longitude pesawat di assign sebagai state x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="530" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-16" target="6jcUVgU10VQW8cEV4oEB-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-16" value="Mengassign variabel konstan (F, H, R, P, dan Q)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="630" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-18" target="6jcUVgU10VQW8cEV4oEB-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-18" value="Memasukkan state x pada algoritma fungsi &lt;i&gt;predict&lt;/i&gt; dan&amp;nbsp;&lt;i&gt;update&lt;/i&gt;&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Mengassign%20variabel%20konstan%20(F%2C%20H%2C%20R%2C%20P%2C%20dan%20Q)%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22195%22%20y%3D%22630%22%20width%3D%22190%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="730" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-20" target="6jcUVgU10VQW8cEV4oEB-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-20" value="Memasukkan list latitude longitude hasil perhitungan Kalman Filter ke list baru berisi latitude longitude semua pesawat hasil perhitungan" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="830" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-22" value="Menghitung Distance Error selisih hasil perhitungan kalman filter dan pengukuran" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="940" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-26" target="6jcUVgU10VQW8cEV4oEB-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-26" target="6jcUVgU10VQW8cEV4oEB-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="1070" />
+              <mxPoint x="470" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-26" value="Apakah semua nama pesawat tersebut sudah masuk list?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="202.5" y="1030" width="175" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jcUVgU10VQW8cEV4oEB-29" target="6jcUVgU10VQW8cEV4oEB-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-29" value="Memplot semua data hasil kalman filter pengukuran latitude longitude dari list yang sudah dibuat" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="1140" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-31" value="END" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-33" value="Iya" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1110" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6jcUVgU10VQW8cEV4oEB-36" value="Tidak" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1050" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
