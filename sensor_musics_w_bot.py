@@ -1,5 +1,5 @@
 # Write your code here :-)
-#python3
+#python3 sensor_musics_w_bot.py
 #DIY Motion Triggered Music Player
 
 import time
@@ -18,26 +18,27 @@ from pathlib import Path
 import logging
 logging.basicConfig(level=logging.INFO)
 
-player_log = logging.getLogger("Player 1")
-
 mypath = "/home/pi/Downloads"
 musicfiles = [f for f in listdir(mypath) if (isfile(join(mypath, f)) and f.endswith(".mp3"))]
 players=[]
+var_pause = 0
 for i in musicfiles:
+    player_log = logging.getLogger("Player (%d)", % i)
     players[i] = OMXPlayer(musicfiles[i], 
                     dbus_name=('org.mpris.MediaPlayer2.omxplayer(%d)', % i))
     players[i].playEvent += lambda _: player_log.info("Play")
     players[i].pauseEvent += lambda _: player_log.info("Pause")
     players[i].stopEvent += lambda _: player_log.info("Stop")
 
-global pid
 class AutoTrigger():
     def call_omxplayer(self):
-        for i in self.file_path:
-            print ("playing " + i)
-            direc = self.mypath + "/" + i
-            print (direc)
-            player.play()
+        j = 1
+        while j<=len(players):
+            for i in players:
+                direc = self.mypath + "/" + i
+                if i == players[1] or not players[j].is_playing():
+                    print ("playing " + musicfiles[players.index(i)])
+                    i.play()
             #info('pid_run')
             #pid =subprocess.Popen(["omxplayer", direc], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             #GPIO.add_event_detect(self.pin, GPIO.FALLING, callback=lambda x: pid.communicate(["p"]), bouncetime=10)
@@ -48,9 +49,9 @@ class AutoTrigger():
             self.song_thread = Thread(target= self.call_omxplayer, args=())
             self.song_thread.start()
             self.is_running = True
-    def __init__(self,pin,file_path,mypath):
+    def __init__(self,pin,mypath):
         self.pin = pin
-        self.file_path = file_path
+        #self.player = players
         self.mypath = mypath
         self.is_running = False
         GPIO.setup(pin, GPIO.IN)
@@ -58,10 +59,10 @@ class AutoTrigger():
         This is a hack (the callback) thanks for python closures!
         '''
         GPIO.add_event_detect(self.pin, GPIO.FALLING, callback=lambda x: self.play_song(), bouncetime=10)
-def main(players, mypath):
+def main(mypath):
     info('main')
     GPIO.setmode(GPIO.BOARD)
-    AutoTrigger(11, players, mypath)
+    AutoTrigger(11, mypath)
     print ("Ready: !")
     try:
         while True:
@@ -90,14 +91,15 @@ def handle(msg):
     elif command == '/start':
         bot.sendMessage (chat_id, str("Starting device"))
     elif command == '/pause':
-        bot.sendMessage (chat_id, str("Pausing the song"))
-        player.pause()
+        for i in players:
+            if i.is_playing():
+                bot.sendMessage (chat_id, str("Pausing the song"))
+                i.pause()
+                var_pause = players.index(i)
     elif command == '/play':
         bot.sendMessage (chat_id, str("Playing the song"))
-        player.play()
+        players[var_pause].play()
     elif command == '/songlist':
-        mypath = "/home/pi/Downloads"
-        musicfiles = [f for f in listdir(mypath) if (isfile(join(mypath, f)) and f.endswith(".mp3"))]
         bot.sendMessage(chat_id, str("List lagu yang dapat dimainkan:"))
         for i in musicfiles:
             bot.sendMessage (chat_id, i)
@@ -112,7 +114,7 @@ if __name__ == '__main__':
     print('Listening...')
     p1 = Process(target=MessageLoop(bot,handle).run_as_thread())
     p1.start()
-    p2 = Process(target=main(players,mypath)
+    p2 = Process(target=main(mypath)
     p2.start()
     p1.join()
     p2.join()
