@@ -22,26 +22,35 @@ mypath = "/home/pi/Downloads"
 musicfiles = [f for f in listdir(mypath) if (isfile(join(mypath, f)) and f.endswith(".mp3"))]
 players=[]
 var_pause = 0
-
-class AutoTrigger():
-    def call_omxplayer(self):
-        for i in musicfiles:
+for i in musicfiles:
             player_log = logging.getLogger("Player " + str(musicfiles.index(i)))
             direc = mypath + "/" + i
             players.append(OMXPlayer(direc, 
                     dbus_name=('org.mpris.MediaPlayer2.omxplayer' + str(musicfiles.index(i)+1))))
+            players[musicfiles.index(i)].pause()
             players[musicfiles.index(i)].playEvent += lambda _: player_log.info("Play")
             players[musicfiles.index(i)].pauseEvent += lambda _: player_log.info("Pause")
             players[musicfiles.index(i)].stopEvent += lambda _: player_log.info("Stop")
-            if players[musicfiles.index(i)-1].is_playing():
-                players[musicfiles.index(i)].pause
 
-        #j = 1
-        #while j<=len(players):
-        #    for i in players:
-        #        if i == players[1] or not players[j].is_playing():
-        #            print ("playing " + musicfiles[players.index(i)])
-        #            i.play()
+class AutoTrigger():
+    def call_omxplayer(self):
+        #for i in musicfiles:
+        #    player_log = logging.getLogger("Player " + str(musicfiles.index(i)))
+        #    direc = mypath + "/" + i
+        #    players.append(OMXPlayer(direc, 
+        #            dbus_name=('org.mpris.MediaPlayer2.omxplayer' + str(musicfiles.index(i)+1))))
+        #    players[musicfiles.index(i)].playEvent += lambda _: player_log.info("Play")
+        #    players[musicfiles.index(i)].pauseEvent += lambda _: player_log.info("Pause")
+        #    players[musicfiles.index(i)].stopEvent += lambda _: player_log.info("Stop")
+        #    if players[musicfiles.index(i)-1].is_playing():
+        #        players[musicfiles.index(i)].pause
+
+        j = 1
+        while j<=len(players):
+            for i in players:
+                if i == players[0] or not players[j].is_playing():
+                    print ("playing " + musicfiles[players.index(i)])
+                    i.play()
             #info('pid_run')
             #pid =subprocess.Popen(["omxplayer", direc], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             #GPIO.add_event_detect(self.pin, GPIO.FALLING, callback=lambda x: pid.communicate(["p"]), bouncetime=10)
