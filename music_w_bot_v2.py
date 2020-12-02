@@ -47,6 +47,7 @@ class AutoTrigger():
 
         for i in players:
             #if i == players[0] or not players[j].is_playing():
+            self.pause_time = 0
             print ("playing " + musicfiles[players.index(i)])
             i.play()
             sleep(i.duration())
@@ -65,37 +66,37 @@ class AutoTrigger():
             self.is_running = True
             self.is_paused = False
 
-    def handle(msg):
-    info('handle')
-    chat_id = msg['chat']['id']
-    command = msg['text']
+    def handle(self,msg):
+        info('handle')
+        chat_id = msg['chat']['id']
+        command = msg['text']
     
-    print ('Received: ')
-    print (command)
+        print ('Received: ')
+        print (command)
     
-    if command == '/hi':
-        bot.sendMessage (chat_id, str("Welcome to Study Comp!"))
-    elif command == '/start':
-        bot.sendMessage (chat_id, str("Starting device"))
-    elif command == '/pause':
-        for i in players:
-            if i.is_playing():
-                bot.sendMessage (chat_id, str("Pausing the song"))
-                i.pause()
-                self.start_time = time.time()
-                self.var_pause = players.index(i)
-                self.has_paused = True
-    elif command == '/play':
-        bot.sendMessage (chat_id, str("Playing the song"))
-        bot.sendMessage (chat_id, self.var_pause)
-        players[self.var_pause].play()
-        self.end_time = time.time()
-        time_lapse = self.end_time-self.start_time
-        self.pause_time += time_lapse
-    elif command == '/songlist':
-        bot.sendMessage(chat_id, str("List lagu yang dapat dimainkan:"))
-        for i in musicfiles:
-            bot.sendMessage (chat_id, i)
+        if command == '/hi':
+            bot.sendMessage (chat_id, str("Welcome to Study Comp!"))
+        elif command == '/start':
+            bot.sendMessage (chat_id, str("Starting device"))
+        elif command == '/pause':
+            for i in players:
+                if i.is_playing():
+                    bot.sendMessage (chat_id, str("Pausing the song"))
+                    i.pause()
+                    self.start_time = time.time()
+                    self.var_pause = players.index(i)
+                    self.has_paused = True
+        elif command == '/play':
+            bot.sendMessage (chat_id, str("Playing the song"))
+            bot.sendMessage (chat_id, self.var_pause)
+            players[self.var_pause].play()
+            self.end_time = time.time()
+            time_lapse = self.end_time-self.start_time
+            self.pause_time += time_lapse
+        elif command == '/songlist':
+            bot.sendMessage(chat_id, str("List lagu yang dapat dimainkan:"))
+            for i in musicfiles:
+                bot.sendMessage (chat_id, i)
     
     def __init__(self,pin, bot, mypath):
         self.pin = pin
@@ -109,7 +110,7 @@ class AutoTrigger():
         self.end_time = 0
         self.pause_time = 0
         GPIO.setup(pin, GPIO.IN)
-        MessageLoop(self.bot,self.handle).run_as_thread()
+        MessageLoop(bot=self.bot,handle=self.handle).run_as_thread()
         #self.message_thread = Thread(target=MessageLoop(self.bot,self.handle).run_as_thread())
         #self.message_thread.start()
         '''
