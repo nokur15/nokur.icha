@@ -45,12 +45,11 @@ class AutoTrigger():
         #    if players[musicfiles.index(i)-1].is_playing():
         #        players[musicfiles.index(i)].pause
 
-        j = 1
-        while j<=len(players):
-            for i in players:
-                if i == players[0] or not players[j].is_playing():
-                    print ("playing " + musicfiles[players.index(i)])
-                    i.play()
+        for i in players:
+            #if i == players[0] or not players[j].is_playing():
+            print ("playing " + musicfiles[players.index(i)])
+            i.play()
+            sleep(i.duration())
             #info('pid_run')
             #pid =subprocess.Popen(["omxplayer", direc], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             #GPIO.add_event_detect(self.pin, GPIO.FALLING, callback=lambda x: pid.communicate(["p"]), bouncetime=10)
@@ -111,6 +110,7 @@ def handle(msg):
                 var_pause = players.index(i)
     elif command == '/play':
         bot.sendMessage (chat_id, str("Playing the song"))
+        bot.sendMessage (chat_id, var_pause)
         players[var_pause].play()
     elif command == '/songlist':
         bot.sendMessage(chat_id, str("List lagu yang dapat dimainkan:"))
