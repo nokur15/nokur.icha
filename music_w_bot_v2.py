@@ -1,8 +1,8 @@
-# Write your code here :-)
 #python3 sensor_musics_w_bot.py
 #DIY Motion Triggered Music Player
 
 import time
+import asyncio
 from time import sleep
 from threading import Thread
 import RPi.GPIO as GPIO
@@ -70,6 +70,7 @@ class AutoTrigger():
         This is a hack (the callback) thanks for python closures!
         '''
         GPIO.add_event_detect(self.pin, GPIO.FALLING, callback=lambda x: self.play_song(), bouncetime=10)
+
 def main(mypath):
     info('main')
     GPIO.setmode(GPIO.BOARD)
@@ -107,14 +108,10 @@ def handle(msg):
             if i.is_playing():
                 bot.sendMessage (chat_id, str("Pausing the song"))
                 i.pause()
-                start = time.strftime('%X')
                 var_pause = players.index(i)
     elif command == '/play':
         bot.sendMessage (chat_id, str("Playing the song"))
         bot.sendMessage (chat_id, var_pause)
-        end = time.strftime('%X')
-        duration_pause = end-start
-        bot.sendMessage (chat_id, duration_pause)
         players[var_pause].play()
     elif command == '/songlist':
         bot.sendMessage(chat_id, str("List lagu yang dapat dimainkan:"))
