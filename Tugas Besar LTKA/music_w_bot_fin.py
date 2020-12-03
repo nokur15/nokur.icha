@@ -29,7 +29,8 @@ logging.basicConfig(level=logging.INFO)
 
 #Early initialization
 ap = argparse.ArgumentParser()
-ap.add_argument("-d", "--directory", type=str, default="/home/pi/Downloads", help="Path folder containing the songs")
+ap.add_argument("-d", "--directory", type=str, 
+                default="/home/pi/Downloads", help="Path folder containing the songs")
 args = vars(ap.parse_args())
 
 mypath = args["directory"]
@@ -74,7 +75,10 @@ class AutoTrigger():
             time_lapse = self.end_time-self.start_time
             self.pause_time += time_lapse
 
-    #Executing responses from the Telegram Bot
+    '''
+    Executing responses from the Telegram Bot
+    Command /start to execute play_song and call_omxplayer as 2nd Thread
+    '''
     def handle(self,msg):
         chat_id = msg['chat']['id']
         command = msg['text']
@@ -87,7 +91,6 @@ class AutoTrigger():
 Give command "/help" to see the list of commands"""))
         elif command == '/start':
             bot.sendMessage (chat_id, str("Starting the device"))
-            self.is_program_running = True
             self.players = []
             #Setting GPIO pin 11
             GPIO.setmode(GPIO.BOARD)
@@ -148,7 +151,7 @@ Please do activate the Raspberry Pi before using this Bot."""))
 /showvol : Showing the volume level (range from 0-10) *
 /decvol : Decreasing the volume by 1 *
 /incvol : Increasing the volume by 1 *
-/end : Closing the program
+/end : Closing the program *
 * Commands cannot activate if "/start" hasn't been executed"""))
         elif command == '/end':
             bot.sendMessage(chat_id, str("Ending the device"))
@@ -156,10 +159,9 @@ Please do activate the Raspberry Pi before using this Bot."""))
             for i in self.players:
                 i.stop()
                 i.quit()
-            self.is_program_running = False
             self.is_running = False
     
-    #initialize class variables, executing Thread to handle, and Thread to play_song and call_omxplayer
+    #initialize class variables, executing Thread to handle
     def __init__(self,pin, bot):
         self.pin = pin      #Pin to receive input from PIR Sensor
         self.bot = bot      #Passing bot variable
@@ -174,7 +176,8 @@ Please do activate the Raspberry Pi before using this Bot."""))
 
 #Main program initialization (pin location, call AutoTrigger, stops program from KeyboardInterrupt)
 def main(bot):
-    AutoTrigger(11, bot)
+    trig = AutoTrigger(11, bot)
+    trig
     print ("Ready: !")
     print('Listening...')
     try:
@@ -182,7 +185,7 @@ def main(bot):
             pass
     except KeyboardInterrupt:
         GPIO.cleanup()
-        for i in players:
+        for i in trig.players:
             i.stop()
             i.quit()      
 
