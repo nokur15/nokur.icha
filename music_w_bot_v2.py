@@ -109,7 +109,7 @@ class AutoTrigger():
         self.start_time = 0
         self.end_time = 0
         self.pause_time = 0
-        self.playing = OMXPlayer()
+        #self.playing = OMXPlayer()
         GPIO.setup(pin, GPIO.IN)
         MessageLoop(bot=self.bot,handle=self.handle).run_as_thread()
         #self.message_thread = Thread(target=MessageLoop(self.bot,self.handle).run_as_thread())
