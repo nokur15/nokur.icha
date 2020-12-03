@@ -177,7 +177,6 @@ Please do activate the Raspberry Pi before using this Bot."""))
 #Main program initialization (pin location, call AutoTrigger, stops program from KeyboardInterrupt)
 def main(bot):
     trig = AutoTrigger(11, bot)
-    trig
     print ("Ready: !")
     print('Listening...')
     try:
