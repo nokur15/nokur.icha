@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-03T15:30:42.972Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36" etag="Oib3dx6Yx9Q1z2P7g8Yh" version="13.10.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-03T16:47:15.683Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36" etag="zQAgjkgdMoLDPyqyixDU" version="13.10.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="924" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="924" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -79,8 +79,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ID2K5cZxV7JCyvLrC_WM-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ID2K5cZxV7JCyvLrC_WM-9" target="ID2K5cZxV7JCyvLrC_WM-13" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="ID2K5cZxV7JCyvLrC_WM-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ID2K5cZxV7JCyvLrC_WM-9" target="WIyWlLk6GJQsqaUBKTNV-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="435" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="ID2K5cZxV7JCyvLrC_WM-9" value="PIR sensor detects motion while in pause" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="457.5" y="390" width="125" height="90" as="geometry" />
@@ -88,11 +90,8 @@
         <mxCell id="ID2K5cZxV7JCyvLrC_WM-12" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="520" y="350" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ID2K5cZxV7JCyvLrC_WM-13" value="Selesai" style="whiteSpace=wrap;html=1;shadow=0;strokeWidth=1;spacing=6;spacingTop=-4;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="630" y="405" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="ID2K5cZxV7JCyvLrC_WM-15" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="582.5" y="410" width="30" height="20" as="geometry" />
+          <mxGeometry x="530" y="475" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
