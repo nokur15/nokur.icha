@@ -48,9 +48,10 @@ class AutoTrigger():
         for i in players:
             #if i == players[0] or not players[j].is_playing():
             self.pause_time = 0
+            self.playing = i
             print ("playing " + musicfiles[players.index(i)])
-            i.play()
-            sleep(i.duration())
+            self.playing.play()
+            sleep(self.playing.duration())
             if self.has_paused:
                 sleep(self.pause_time)
             #info('pid_run')
@@ -79,17 +80,16 @@ class AutoTrigger():
         elif command == '/start':
             bot.sendMessage (chat_id, str("Starting device"))
         elif command == '/pause':
-            for i in players:
-                if i.is_playing():
-                    bot.sendMessage (chat_id, str("Pausing the song"))
-                    i.pause()
-                    self.start_time = time.time()
-                    self.var_pause = players.index(i)
-                    self.has_paused = True
+            bot.sendMessage (chat_id, str("Pausing the song"))
+            self.playing.pause()
+            self.start_time = time.time()
+            #self.var_pause = players.index(i)
+            self.has_paused = True
         elif command == '/play':
             bot.sendMessage (chat_id, str("Playing the song"))
-            bot.sendMessage (chat_id, self.var_pause)
-            players[self.var_pause].play()
+            #bot.sendMessage (chat_id, self.var_pause)
+            #players[self.var_pause].play()
+            self.playing.play()
             self.end_time = time.time()
             time_lapse = self.end_time-self.start_time
             self.pause_time += time_lapse
@@ -109,6 +109,7 @@ class AutoTrigger():
         self.start_time = 0
         self.end_time = 0
         self.pause_time = 0
+        self.playing = OMXPlayer()
         GPIO.setup(pin, GPIO.IN)
         MessageLoop(bot=self.bot,handle=self.handle).run_as_thread()
         #self.message_thread = Thread(target=MessageLoop(self.bot,self.handle).run_as_thread())
