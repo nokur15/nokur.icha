@@ -1,1 +1,67 @@
-<mxfile host="app.diagrams.net" modified="2021-06-17T12:52:44.994Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" version="14.7.10" etag="2PanJ3b-kBz4slk1wCEK" type="github"><diagram id="dsxD46XBbDtSKpclLewU">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-06-17T13:04:32.247Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="bJBSczG__qGsripTCXJZ" version="14.7.10" type="github">
+  <diagram id="dsxD46XBbDtSKpclLewU" name="Page-1">
+    <mxGraphModel dx="945" dy="439" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-1" target="-mX8dRwaxjFIqxhfCs7Z-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-1" value="Perumusan Masalah" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-2" target="-mX8dRwaxjFIqxhfCs7Z-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-2" value="Penentuan Spesifikasi" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-4" target="-mX8dRwaxjFIqxhfCs7Z-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-4" value="Kajian Pustaka" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-6" target="-mX8dRwaxjFIqxhfCs7Z-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-6" value="Pemilihan Desain Sistem" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-8" target="-mX8dRwaxjFIqxhfCs7Z-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-8" value="Pengukuran dan simulasi sistem" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-10" target="-mX8dRwaxjFIqxhfCs7Z-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-10" value="Analisis Sistem" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-12" target="-mX8dRwaxjFIqxhfCs7Z-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-12" value="Pengoptimalan sistem" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-14" target="-mX8dRwaxjFIqxhfCs7Z-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-14" value="Realisasi sistem" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-mX8dRwaxjFIqxhfCs7Z-16" target="-mX8dRwaxjFIqxhfCs7Z-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-16" value="Pengukuran dan analisis sistem akhir" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-mX8dRwaxjFIqxhfCs7Z-18" value="Evaluasi sistem" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
